@@ -5,7 +5,7 @@
   "projects": {
     "demos": {
       "root": "",
-      "sourceRoot": "projects/demos",
+      "sourceRoot": "projects/src",
       "projectType": "application",
       "prefix": "mwl",
       "schematics": {
@@ -34,17 +34,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demos",
-            "index": "projects/demos/index.html",
-            "main": "projects/demos/main.ts",
-            "polyfills": "projects/demos/polyfills.ts",
-            "tsConfig": "projects/demos/tsconfig.app.json",
+            "outputPath": "dist/src",
+            "index": "projects/src/index.html",
+            "main": "projects/src/main.ts",
+            "polyfills": "projects/src/polyfills.ts",
+            "tsConfig": "projects/src/tsconfig.app.json",
             "assets": [
-              "projects/demos/favicon.ico",
-              "projects/demos/sw.js",
-              "projects/demos/assets"
+              "projects/src/favicon.ico",
+              "projects/src/sw.js",
+              "projects/src/assets"
             ],
-            "styles": ["projects/demos/styles.scss"],
+            "styles": ["projects/src/styles.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -63,8 +63,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/demos/environments/environment.ts",
-                  "with": "projects/demos/environments/environment.prod.ts"
+                  "replace": "projects/src/environments/environment.ts",
+                  "with": "projects/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -92,8 +92,8 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/demos/**/*.ts",
-              "projects/demos/**/*.html"
+              "projects/src/**/*.ts",
+              "projects/src/**/*.html"
             ]
           }
         },

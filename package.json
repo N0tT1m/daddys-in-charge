@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "start": "pnpm ng serve --open",
+    "start": "pnpm ng serve --open --host 192.168.1.89 --port 6996",
     "build:copy-package-json": "copyfiles package.json projects/angular-calendar & copyfiles package.json projects/angular-calendar/schematics/ng-add",
     "build:lib": "ng build angular-calendar --configuration production",
     "build:date-adapters": "tsc -p tsconfig-date-adapters.json && tsc -p tsconfig-date-adapters.json --module es2015 --outDir ./dist/angular-calendar/date-adapters/esm",
@@ -175,6 +175,7 @@
     "angular-draggable-droppable": "^8.0.0",
     "angular-resizable-element": "^7.0.0",
     "calendar-utils": "^0.10.4",
+    "pnpm": "^8.15.5",
     "positioning": "^2.0.1",
     "tslib": "^2.4.1"
   },
